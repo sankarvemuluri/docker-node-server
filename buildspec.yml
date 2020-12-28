@@ -4,7 +4,7 @@ phases:
     commands: 
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
-      - "docker build -t node-server ."
+      - "docker build -t node-server Dockerfile"
       - "docker tag node-server sankarv/node-server:latest"
   post_build: 
     commands: 
@@ -17,8 +17,7 @@ phases:
       - curl -fsSL https://get.docker.com -o get-docker.sh
       - sh get-docker.sh
       - docker --version 
-      - systemctl start docker
-      - service docker start
+      - docker images
       -  "docker login --username=sankarv --password=81257San."
 version: 0.1
 
