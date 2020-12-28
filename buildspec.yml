@@ -15,6 +15,7 @@ phases:
     commands: 
       - "echo Logging in to Docker Hub..."
       - cat  /etc/os-release
+      - systemctl enable docker 
       - service docker start 
       - docker --version 
       - docker images
