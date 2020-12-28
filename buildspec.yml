@@ -14,8 +14,7 @@ phases:
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub..."
-      - curl -fsSL https://get.docker.com -o get-docker.sh
-      - sh get-docker.sh
+      - cat  /etc/os-release
       - docker --version 
       - docker images
       -  "docker login --username=sankarv --password=81257San."
