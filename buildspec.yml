@@ -16,6 +16,7 @@ phases:
       - "echo Logging in to Docker Hub..."
       - curl -fsSL https://get.docker.com -o get-docker.sh
       - sh get-docker.sh
+      - docker --version 
       - systemctl start docker
       - service docker start
       -  "docker login --username=sankarv --password=81257San."
