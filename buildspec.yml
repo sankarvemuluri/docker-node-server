@@ -4,8 +4,8 @@ phases:
     commands: 
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
-      - docker build -t node-server .
-      - docker tag node-server sankarv/node-server:latest
+      - "docker build -t node-server ."
+      - "docker tag node-server sankarv/node-server:latest"
   post_build: 
     commands: 
       - "echo Build completed on `date`"
@@ -14,6 +14,8 @@ phases:
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub..."
+      - curl -fsSL https://get.docker.com -o get-docker.sh
+      - sh get-docker.sh
       -  "docker login --username=sankarv --password=81257San."
 version: 0.1
 
