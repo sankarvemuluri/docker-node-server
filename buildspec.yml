@@ -15,6 +15,7 @@ phases:
     commands: 
       - "echo Logging in to Docker Hub..."
       - cat  /etc/os-release
+      - service docker start 
       - docker --version 
       - docker images
       -  "docker login --username=sankarv --password=81257San."
